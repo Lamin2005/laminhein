@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#home{
+    width: 100%;
+    height: 80vh;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .hero_text {
+    width: 549px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero_text .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.text h3 {
+    font-size: 20px;
+}
+
+.text h1 {
+    font-size: 40px;
+    color: #00d1ff;
+    margin: 0px;
+}
+
+.text h2 {
+    font-size: 33px;
+    margin-top: 0;
+}
+
+.text p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.main .icons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icons .icon {
+    color: #00d1ff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin-right: 10px;
+    width: 200px;
+    padding: 1.2rem 2rem;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons .contact {
+    background-color: #00d1ff;
+    color: white;
+}
+
+.buttons .cv {
+    background-color: transparent;
+    color: #00d1ff;
+    border: 1px solid #00d1ff;
+
+}
+
+
+.main .hero_img {
+    width: 500px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.images {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.hero_img .border {
+    width: 365px;
+    height: 365px;
+    background-color: #00d1ff;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+
+    opacity: 0;
+    animation:
+        fadeIn 1s ease-out forwards,
+        floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0s, 1s;
+    /* fadeIn starts immediately, float starts after 1s */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Floating Up and Down Animation */
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.border img {
+    width: 100%;
+    height: 100%;
+}
+
+.typing-text {
+    color: #00d1ff;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background-color: #00d1ff;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+    }
+}
+
+
+
+@media screen and (max-width:1095px) {
+    #home{
+        width: 100%;
+        height: 120vh;
+        padding-top: 6.5rem;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .main .hero_text {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        margin-bottom: 3rem;
+    }
+
+    .hero_text .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .main .icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+
+    .icons .icon {
+        color: #00d1ff;
+        margin-right: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+}
+
+
+
+@media screen and (max-width:1095px) {
+    .main {
+        width: 100%;
+    }
+}
