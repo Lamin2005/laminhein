@@ -14,10 +14,10 @@ function App() {
         <section id="home">
           <Header />
         </section>
-        <section id="about" style={{ height: "80vh", padding: "2rem", }}>
+        <section id="about" style={{ height: "70vh", padding: "2rem", }}>
          <About/>
         </section>
-        <section id="project" style={{ height: "100vh", padding: "2rem" }}>
+        <section id="project" style={{ height: "100vh", padding: "2rem",backgroundColor:"red" }}>
           Project
         </section>
         <section id="contact" style={{ height: "100vh", padding: "2rem" }}>

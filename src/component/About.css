@@ -35,17 +35,22 @@
 }
 
 .about_text .skill {
-    display: flex;
-    justify-content: start;
-    align-items: center;
     margin-top: 10px;
 }
 
 .skill h4 {
-    margin-right: 10px;
+    margin-right: 20px;
     background-color: transparent;
     cursor: pointer;
 }
+
+.skill .skill-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
 
 .aboutwhite {
     color: white;
@@ -58,6 +63,51 @@
 
 .aboutdark {
     color: black;
+}
+
+.skill-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.skill-section .language {
+    color: white;
+    border: 1px solid #00d1ff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.language span {
+    margin-left: 3px;
+    font-style: italic;
+}
+
+.html {
+    color: red;
+}
+
+.css {
+    color: rgb(47, 161, 199);
+}
+
+.js {
+    color: yellow;
+}
+
+
+.react {
+    color: #00d1ff;
+}
+
+.php {
+    color:rgb(25, 144, 184);
 }
 
 @media screen and (max-width:1095px) {
@@ -80,7 +130,7 @@
         text-align: center;
     }
 
-    .about_text .skill {
+    .about_text .skill-header {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -90,4 +140,16 @@
     .skill h4 {
         margin: 0px;
     }
+
+
+    .skill-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
 }

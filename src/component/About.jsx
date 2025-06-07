@@ -2,6 +2,9 @@ import "./About.css";
 import laminhein from "../assets/laminhein.jpg";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
+import Skill from "./Skill";
+import Experience from "./Experience";
+import Education from "./Education";
 
 let About = () => {
   let { darkMode } = useTheme();
@@ -23,42 +26,49 @@ let About = () => {
           ullam?
         </p>
         <div className="skill">
-          <h4
-            className={
-              activeTab === "skill"
-                ? "activeTab"
-                : `${darkMode ? "aboutwhite" : "aboutdark"}`
-            }
-            onClick={() => {
-              setActiveTab("skill");
-            }}
-          >
-            Skill
-          </h4>
-          <h4
-            className={
-              activeTab === "experience"
-                ? "activeTab"
-                : `${darkMode ? "aboutwhite" : "aboutdark"}`
-            }
-            onClick={() => {
-              setActiveTab("experience");
-            }}
-          >
-            Experience
-          </h4>
-          <h4
-            className={
-              activeTab === "education"
-                ? "activeTab"
-                : `${darkMode ? "aboutwhite" : "aboutdark"}`
-            }
-            onClick={() => {
-              setActiveTab("education");
-            }}
-          >
-            Education
-          </h4>
+          <div className="skill-header">
+            <h4
+              className={
+                activeTab === "skill"
+                  ? "activeTab"
+                  : `${darkMode ? "aboutwhite" : "aboutdark"}`
+              }
+              onClick={() => {
+                setActiveTab("skill");
+              }}
+            >
+              Skill
+            </h4>
+            <h4
+              className={
+                activeTab === "experience"
+                  ? "activeTab"
+                  : `${darkMode ? "aboutwhite" : "aboutdark"}`
+              }
+              onClick={() => {
+                setActiveTab("experience");
+              }}
+            >
+              Experience
+            </h4>
+            <h4
+              className={
+                activeTab === "education"
+                  ? "activeTab"
+                  : `${darkMode ? "aboutwhite" : "aboutdark"}`
+              }
+              onClick={() => {
+                setActiveTab("education");
+              }}
+            >
+              Education
+            </h4>
+          </div>
+          <div className="skill-main">
+            {activeTab === "skill" && <Skill />}
+            {activeTab === "experience" && <Experience/>}
+            {activeTab === "education" && <Education />}
+          </div>
         </div>
       </div>
     </div>
