@@ -3,7 +3,7 @@ import "./Header.css";
 import { useTheme } from "../context/ThemeContext";
 
 const TypingEffect = () => {
-  const words = useMemo(() => ["Computer Science", "Programmer", "Developer"], []);
+  const words = useMemo(() => ["Computer Science", "Developer"], []);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

@@ -1,27 +1,28 @@
 import "./App.css";
 import Nav from "./component/Nav";
 import Header from "./component/Header";
+import About from "./component/About";
 import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        <div className="nav">
+        <nav className="nav">
           <Nav/>
-        </div>
-        <div id="home">
+        </nav>
+        <section id="home">
           <Header />
-        </div>
-        <div id="about" style={{ height: "100vh", padding: "2rem",backgroundColor:"blue" }}>
-          About
-        </div>
-        <div id="project" style={{ height: "100vh", padding: "2rem" }}>
+        </section>
+        <section id="about" style={{ height: "80vh", padding: "2rem", }}>
+         <About/>
+        </section>
+        <section id="project" style={{ height: "100vh", padding: "2rem" }}>
           Project
-        </div>
-        <div id="contact" style={{ height: "100vh", padding: "2rem" }}>
+        </section>
+        <section id="contact" style={{ height: "100vh", padding: "2rem" }}>
           Contact
-        </div>
+        </section>
       </div>
     </ThemeProvider>
   );
