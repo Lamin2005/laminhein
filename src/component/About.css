@@ -43,8 +43,22 @@
 
 .skill h4 {
     margin-right: 10px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
+.aboutwhite {
+    color: white;
+}
+
+.activeTab {
+    color: #00d1ff;
+    border-bottom: 2px solid #00d1ff;
+}
+
+.aboutdark {
+    color: black;
+}
 
 @media screen and (max-width:1095px) {
     .about_img {
