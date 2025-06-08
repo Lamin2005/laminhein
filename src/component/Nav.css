@@ -33,7 +33,7 @@ body.dark-mode {
   z-index: 1000;
   transition: all 0.3s ease;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  margin-top: 3rem;
+  margin-top: 4rem;
   border-radius: 20px;
 }
 
