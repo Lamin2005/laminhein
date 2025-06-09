@@ -3,7 +3,6 @@ import laminhein from "../assets/laminhein.jpg";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import Skill from "./Skill";
-import Experience from "./Experience";
 import Education from "./Education";
 
 let About = () => {
@@ -41,18 +40,6 @@ let About = () => {
             </h4>
             <h4
               className={
-                activeTab === "experience"
-                  ? "activeTab"
-                  : `${darkMode ? "aboutwhite" : "aboutdark"}`
-              }
-              onClick={() => {
-                setActiveTab("experience");
-              }}
-            >
-              Experience
-            </h4>
-            <h4
-              className={
                 activeTab === "education"
                   ? "activeTab"
                   : `${darkMode ? "aboutwhite" : "aboutdark"}`
@@ -66,7 +53,6 @@ let About = () => {
           </div>
           <div className="skill-main">
             {activeTab === "skill" && <Skill />}
-            {activeTab === "experience" && <Experience/>}
             {activeTab === "education" && <Education />}
           </div>
         </div>

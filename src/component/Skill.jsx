@@ -6,28 +6,33 @@ import {
   faPhp,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./About.css"
+import { useTheme } from "../context/ThemeContext";
 
 let Skill = () => {
+
+  let {darkMode} = useTheme();
+
   return (
     <div className="skill-section">
       <div className="language">
-        <FontAwesomeIcon icon={faHtml5} className="html"/> <span>Html</span>
+        <FontAwesomeIcon icon={faHtml5} className="html"/> <span  style={{ color: `${darkMode ? "white" : "black"}` }}>Html</span>
       </div>
       <div className="language">
         <FontAwesomeIcon icon={faCss} className="css" />
-        <span>Css</span>
+        <span  style={{ color: `${darkMode ? "white" : "black"}` }}>Css</span>
       </div>
       <div className="language">
         <FontAwesomeIcon icon={faJs} className="js" />
-        <span>JavaScript</span>
+        <span  style={{ color: `${darkMode ? "white" : "black"}` }}>JavaScript</span>
       </div>
       <div className="language">
         <FontAwesomeIcon icon={faReact} className="react" />
-       <span>React</span>
+       <span  style={{ color: `${darkMode ? "white" : "black"}` }}>React</span>
       </div>
       <div className="language">
         <FontAwesomeIcon icon={faPhp} className="php" />
-       <span>php</span>
+       <span  style={{ color: `${darkMode ? "white" : "black"}` }}>php</span>
       </div>
     </div>
   );

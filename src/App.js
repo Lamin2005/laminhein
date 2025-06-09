@@ -3,6 +3,7 @@ import Nav from "./component/Nav";
 import Header from "./component/Header";
 import About from "./component/About";
 import { ThemeProvider } from "./context/ThemeContext";
+import Project from "./component/Project";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         <section id="about" style={{ height: "70vh", padding: "2rem", }}>
          <About/>
         </section>
-        <section id="project" style={{ height: "100vh", padding: "2rem",backgroundColor:"red" }}>
-          Project
+        <section id="project" style={{padding: "2rem"}}>
+          <Project/>
         </section>
         <section id="contact" style={{ height: "100vh", padding: "2rem" }}>
           Contact
