@@ -8,6 +8,7 @@ export let projectList = [
             minus quia ad laudantium. A ratione reprehenderit esse laboriosam
             ipsam aspernatur inventore vel neque consequatur, nostrum provident,
             impedit praesentium repellendus tempora?`,
+    plink: "link",
   },
 
   {
@@ -19,6 +20,7 @@ export let projectList = [
             minus quia ad laudantium. A ratione reprehenderit esse laboriosam
             ipsam aspernatur inventore vel neque consequatur, nostrum provident,
             impedit praesentium repellendus tempora?`,
+    plink: "link",
   },
 
   {
@@ -30,6 +32,7 @@ export let projectList = [
             minus quia ad laudantium. A ratione reprehenderit esse laboriosam
             ipsam aspernatur inventore vel neque consequatur, nostrum provident,
             impedit praesentium repellendus tempora?`,
+    plink: "link",
   },
 
   {
@@ -41,5 +44,6 @@ export let projectList = [
             minus quia ad laudantium. A ratione reprehenderit esse laboriosam
             ipsam aspernatur inventore vel neque consequatur, nostrum provident,
             impedit praesentium repellendus tempora?`,
+    plink: "link",
   },
 ];

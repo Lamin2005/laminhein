@@ -109,6 +109,30 @@
     animation: ripple 0.6s linear infinite;
 }
 
+.view_btn{
+    padding: 1rem 1rem;
+    background-color: #00d1ff;
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.pwhite{
+    color:white;
+}
+
+.pblack{
+    color: black;
+}
+
+.pblue{
+    color: #00d1ff;
+}
+
 @keyframes ripple {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
@@ -119,11 +143,6 @@
     }
 }
 
-@media (max-width:1184px) and (min-width:768px) {
-    .project-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media screen and (min-width:768px) {
 
@@ -134,5 +153,11 @@
 
     .project-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:1184px) and (min-width:700px) {
+    .project-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
