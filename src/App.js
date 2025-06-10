@@ -4,6 +4,8 @@ import Header from "./component/Header";
 import About from "./component/About";
 import { ThemeProvider } from "./context/ThemeContext";
 import Project from "./component/Project";
+import Contact from "./component/Contect";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -21,9 +23,10 @@ function App() {
         <section id="project" style={{padding: "2rem"}}>
           <Project/>
         </section>
-        <section id="contact" style={{ height: "100vh", padding: "2rem" }}>
-          Contact
+        <section id="contact" style={{ height: "100vh", padding: "2rem",display:"flex",justifyContent:"space-around",alignItems:"center" }}>
+          <Contact/>
         </section>
+        <Footer/>
       </div>
     </ThemeProvider>
   );

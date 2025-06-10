@@ -15,9 +15,9 @@ let Project = () => {
             <div className="list" key={list.pid}>
               <div className="pimg"></div>
               <div className="planguages">
-                <div className={`language  ${darkMode ? 'pwhite' : 'pblack'} }`} >{list.planguages[0]}</div>
-                <div className={`language  ${darkMode ? 'pwhite' : 'pblack'} }`}>{list.planguages[1]}</div>
-                <div className={`language  ${darkMode ? 'pwhite' : 'pblack'} }`}>{list.planguages[2]}</div>
+                <div className={`language  ${darkMode ? 'lwhite' : 'lblack'} }`} >{list.planguages[0]}</div>
+                <div className={`language  ${darkMode ? 'lwhite' : 'lblack'} }`}>{list.planguages[1]}</div>
+                <div className={`language  ${darkMode ? 'lwhite' : 'lblack'} }`}>{list.planguages[2]}</div>
               </div>
               <h3 className={`pname  ${darkMode ? 'pblue' : 'pblack'} }`} style={{ color: `${darkMode ? "pwhite" : "pblack"}` }}>{list.ptilte}</h3>
               <p className={`${darkMode ? 'pwhite' : 'pblack'} }`}>{list.pdescription}</p>

@@ -57,7 +57,6 @@
 
 .planguages .language {
     margin: 10px 20px 10px 0;
-    background-color: #4b7079;
     padding: 0.2rem 0.8rem;
     border-radius: 20px;
 }
@@ -109,7 +108,7 @@
     animation: ripple 0.6s linear infinite;
 }
 
-.view_btn{
+.view_btn {
     padding: 1rem 1rem;
     background-color: #00d1ff;
     color: white;
@@ -121,16 +120,29 @@
     font-size: 15px;
 }
 
-.pwhite{
-    color:white;
+.pwhite {
+    color: white;
 }
 
-.pblack{
+.pblack {
     color: black;
 }
 
-.pblue{
+.pblue {
     color: #00d1ff;
+}
+
+.lwhite {
+    color: white;
+    background-color: #4b7079;
+    border: none;
+
+}
+
+.lblack {
+    color: black;
+    background-color: transparent;
+    border: 1px solid #00d1ff;
 }
 
 @keyframes ripple {

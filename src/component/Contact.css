@@ -1,0 +1,28 @@
+.contact {
+    width: 50%;
+}
+
+.formdark {
+    background-color: #282c34;
+    color: white;
+}
+
+.formwhite {
+    background-color: white;
+    color: black;
+}
+
+.formfielddark {
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.formfieldwhite {
+    box-shadow: inset 2px 5px 10px rgb(230, 211, 211);
+}
+
+
+@media screen and (max-width:768px) {
+    .contact {
+        width: 100%;
+    }
+}

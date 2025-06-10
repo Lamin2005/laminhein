@@ -6,10 +6,7 @@ body {
   height: 300vh;
 }
 
-body.dark-mode {
-  background-color: #111;
-  color: #eee;
-}
+
 
 .nav {
   width: 100%;
@@ -118,12 +115,13 @@ body.dark-mode .nav {
 /* Mobile styles */
 @media (max-width: 768px) {
 
-  .inner-nav{
+  .inner-nav {
     width: 90%;
   }
 
   .toggleButton {
     display: flex;
+   
   }
 
   .menu {
@@ -131,8 +129,9 @@ body.dark-mode .nav {
     top: 80px;
     right: -100%;
     width: 200px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     height: 200px;
     transition: right 0.4s ease;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
@@ -183,10 +182,10 @@ body.dark-mode .nav {
   transition: color 0.3s ease;
 }
 
-.black{
+.black {
   background-color: black;
 }
 
-.light{
+.light {
   background-color: white;
 }
