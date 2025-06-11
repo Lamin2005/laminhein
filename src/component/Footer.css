@@ -9,9 +9,11 @@
 
 .icons{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding-left: 0.8rem;
 }
+
 
 .copyright{
     margin-top: 0.5rem;
