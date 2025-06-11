@@ -23,7 +23,7 @@ function App() {
         <section id="project" style={{padding: "2rem"}}>
           <Project/>
         </section>
-        <section id="contact" style={{ height: "100vh", padding: "2rem",display:"flex",justifyContent:"space-around",alignItems:"center" }}>
+        <section id="contact">
           <Contact/>
         </section>
         <Footer/>

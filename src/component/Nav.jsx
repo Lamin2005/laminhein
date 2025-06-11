@@ -35,12 +35,41 @@ const Nav = () => {
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "project", "contact"];
+      let currentSection = "home";
+
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = id;
+          }
+        }
+      });
+
+      const sectionName =
+        currentSection.charAt(0).toUpperCase() + currentSection.slice(1);
+      setActive(sectionName);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className={`inner-nav ${menuOpen ? "open" : ""}`}>
       <div className="logo">
         <h2>La Min Hein</h2>
       </div>
-      <div className={`menu ${menuOpen ? "show" : ""}`} ref={menuRef}>
+      <div
+        className={`menu ${menuOpen ? "show" : ""} ${
+          darkMode ? "dark-bg" : "light-bg"
+        }`}
+        ref={menuRef}
+      >
         <ul>
           {["Home", "About", "Project", "Contact"].map((item) => (
             <li
