@@ -2,6 +2,7 @@ import "./Header.css";
 import { useTheme } from "../context/ThemeContext";
 import laminhein from "../assets/laminhein.png";
 import TypingEffect from "./TypingEffect";
+import Swal from "sweetalert2";
 import {
   faGithub,
   faFacebook,
@@ -12,6 +13,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   let { darkMode } = useTheme();
+
+  let gocontact = () => {
+    let contact = document.getElementById("contact");
+    if (contact) {
+      contact.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  let DownloadCv = () => {
+    Swal.fire({
+      title: "Coming Soon!",
+      text: "My CV will be available for download shortly.",
+      icon: "info",
+      confirmButtonText: "Got it!",
+      confirmButtonColor: "#00d1ff",
+    });
+  };
 
   return (
     <div className="main">
@@ -45,8 +63,10 @@ const Header = () => {
           </div>
         </div>
         <div className="buttons">
-          <button className="contact">Contact</button>
-          <button className="cv">Download CV</button>
+          <button className="contact" onClick={gocontact}>
+            Contact
+          </button>
+          <button className="cv" onClick={DownloadCv}>Download CV</button>
         </div>
       </div>
       <div className="hero_img">

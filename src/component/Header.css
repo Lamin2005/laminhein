@@ -95,15 +95,23 @@
 .buttons .contact {
     background-color: #00d1ff;
     color: white;
+    transition: background-color 0.3s ease;
 }
 
 .buttons .cv {
     background-color: transparent;
     color: #00d1ff;
     border: 1px solid #00d1ff;
+    transition: background-color 0.3s ease;
 
 }
 
+.buttons .contact:hover,
+.buttons .cv:hover {
+    background-color: #083742;
+    color: white;
+    border: none;
+}
 
 .main .hero_img {
     width: 40%;
