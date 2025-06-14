@@ -7,7 +7,7 @@ import {
   faGithub,
   faFacebook,
   faYoutube,
-  faInstagram,
+  faTelegram
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -49,18 +49,26 @@ const Header = () => {
           </p>
         </div>
         <div className="icons">
-          <div className="icon">
+           <div className="icon">
+          <a href="https://github.com/Lamin2005/">
             <FontAwesomeIcon icon={faGithub} size="2x" />
-          </div>
-          <div className="icon">
+          </a>
+        </div>
+        <div className="icon">
+          <a href="https://www.facebook.com/share/1DfXvAJ5BV/">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
-          </div>
-          <div className="icon">
+          </a>
+        </div>
+        <div className="icon">
+          <a href="http://www.youtube.com/@carbondioxidedioxide">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
-          </div>
-          <div className="icon">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </div>
+          </a>
+        </div>
+        <div className="icon">
+          <a href="https://t.me/laminhein1122">
+            <FontAwesomeIcon icon={faTelegram} size="2x" />
+          </a>
+        </div>
         </div>
         <div className="buttons">
           <button className="contact" onClick={gocontact}>

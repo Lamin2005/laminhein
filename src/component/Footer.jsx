@@ -4,33 +4,42 @@ import {
   faGithub,
   faFacebook,
   faYoutube,
-  faInstagram,
+  faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 import { useTheme } from "../context/ThemeContext";
 
 let Footer = () => {
-
-    let {darkMode} = useTheme();
-    let date = new Date().getFullYear();
+  let { darkMode } = useTheme();
+  let date = new Date().getFullYear();
 
   return (
     <div className="footer">
       <div className="icons">
         <div className="icon">
-          <FontAwesomeIcon icon={faGithub} size="2x" />
+          <a href="https://github.com/Lamin2005/">
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
         </div>
         <div className="icon">
-          <FontAwesomeIcon icon={faFacebook} size="2x" />
+          <a href="https://www.facebook.com/share/1DfXvAJ5BV/">
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
+          </a>
         </div>
         <div className="icon">
-          <FontAwesomeIcon icon={faYoutube} size="2x" />
+          <a href="http://www.youtube.com/@carbondioxidedioxide">
+            <FontAwesomeIcon icon={faYoutube} size="2x" />
+          </a>
         </div>
         <div className="icon">
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+          <a href="https://t.me/laminhein1122">
+            <FontAwesomeIcon icon={faTelegram} size="2x" />
+          </a>
         </div>
       </div>
       <div className="copyright">
-        <p style={{ color: `${darkMode ? "antiquewhite" : "black"}` }} >Copyright <span>{date}</span> La Min Hein. All right reserved.</p>
+        <p style={{ color: `${darkMode ? "antiquewhite" : "black"}` }}>
+          Copyright <span>{date}</span> La Min Hein. All right reserved.
+        </p>
       </div>
     </div>
   );
