@@ -8,7 +8,6 @@
 .about_img {
     width: 40%;
     height: 80%;
-
 }
 
 .about_img img {
@@ -124,6 +123,16 @@
     margin-bottom: 0px;
 }
 
+.education-section .text p {
+    border-left: 5px solid #00d1ff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+
+
+
 
 @media screen and (max-width:1095px) {
     .about_img {
@@ -178,8 +187,8 @@
         margin-top: 20px;
     }
 
-    .education-section .text{
-        width: 50%;
+    .education-section .text {
+        width: 80%;
         text-align: justify;
     }
 

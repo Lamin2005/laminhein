@@ -30,7 +30,7 @@ let Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        <p style={{ color: `${darkMode ? "aliceblue" : "black"}` }} >Copyright <span>{date}</span> La Min Hein. All right reserved.</p>
+        <p style={{ color: `${darkMode ? "antiquewhite" : "black"}` }} >Copyright <span>{date}</span> La Min Hein. All right reserved.</p>
       </div>
     </div>
   );

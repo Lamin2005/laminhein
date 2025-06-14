@@ -8,10 +8,10 @@ import Education from "./Education";
 let About = () => {
   let { darkMode } = useTheme();
   let [activeTab, setActiveTab] = useState("skill");
-
+  
   return (
     <div className="about">
-      <div className="about_img">
+      <div className="about_img" >
         <img src={laminhein} alt="laminhein_aboutimg" />
       </div>
       <div className="about_text">

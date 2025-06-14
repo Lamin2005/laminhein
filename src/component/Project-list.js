@@ -19,7 +19,7 @@ export let projectList = [
     pid: Math.random().toString(),
     pimg:BookStore,
     ptilte: "BookStore Shop",
-    planguages: ["html", "css", "javascript"],
+    planguages: ["React", "css"],
     pdescription: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
             minus quia ad laudantium. A ratione reprehenderit esse laboriosam
             ipsam aspernatur inventore vel neque consequatur, nostrum provident,
@@ -31,7 +31,7 @@ export let projectList = [
     pid: Math.random().toString(),
     pimg: Portfolio,
     ptilte: "Portfolio",
-    planguages: ["html", "css", "javascript"],
+    planguages: ["React","css"],
     pdescription: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
             minus quia ad laudantium. A ratione reprehenderit esse laboriosam
             ipsam aspernatur inventore vel neque consequatur, nostrum provident,

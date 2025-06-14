@@ -3,7 +3,7 @@ import "./Nav.css";
 import "./ToggleButton.css";
 import { useTheme } from "../context/ThemeContext";
 
-const Nav = () => {
+const Nav = ({show}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("Home");
   const menuRef = useRef();
@@ -60,7 +60,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className={`inner-nav ${menuOpen ? "open" : ""}`}>
+    <nav className={`inner-nav ${menuOpen ? "open" : ""} ${show ? "nav-slide-down" : ""}`}>
       <div className="logo">
         <h2>La Min Hein</h2>
       </div>

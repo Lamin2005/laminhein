@@ -1,40 +1,102 @@
 import styled from "styled-components";
 import "./Contact.css";
 import { useTheme } from "../context/ThemeContext";
+import { useState } from "react";
 
 const Form = () => {
   let { darkMode } = useTheme();
+  const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false); // NEW
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);        // Start loading
+    setResult("");           // Clear previous result
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "18dfa03e-727d-4727-88b5-ac6f31784197");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
+
+      if (res.success) {
+        setResult("Message sent successfully!");
+        event.target.reset(); // Clear form after success
+        setTimeout(()=>{
+          setResult("");
+        },2000)
+      } else {
+        setResult("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setResult("Error submitting the form.");
+    } finally {
+      setLoading(false); // Stop loading
+    }
+  };
 
   return (
     <StyledWrapper>
       <div className="form-card1">
         <div className="form-card2">
-          <form className={`form ${darkMode ? "formdark" : "formwhite"}`}>
-            <div className={`form-field ${darkMode ? "formfielddark" : "formfieldwhite"}`}>
+          <form
+            className={`form ${darkMode ? "formdark" : "formwhite"}`}
+            onSubmit={onSubmit}
+          >
+            <div
+              className={`form-field ${
+                darkMode ? "formfielddark" : "formfieldwhite"
+              }`}
+            >
               <input
                 required
                 placeholder="Name"
                 className="input-field"
                 type="text"
+                name="name"
               />
             </div>
-            <div className={`form-field ${darkMode ? "formfielddark" : "formfieldwhite"}`}>
+            <div
+              className={`form-field ${
+                darkMode ? "formfielddark" : "formfieldwhite"
+              }`}
+            >
               <input
                 required
                 placeholder="Email"
                 className="input-field"
                 type="email"
+                name="email"
               />
             </div>
-            <div className={`form-field ${darkMode ? "formfielddark" : "formfieldwhite"}`}>
+            <div
+              className={`form-field ${
+                darkMode ? "formfielddark" : "formfieldwhite"
+              }`}
+            >
               <input
                 required
                 placeholder="Subject"
                 className="input-field"
                 type="text"
+                name="subject"
               />
             </div>
-            <div className={`form-field ${darkMode ? "formfielddark" : "formfieldwhite"}`}>
+            <div
+              className={`form-field ${
+                darkMode ? "formfielddark" : "formfieldwhite"
+              }`}
+            >
               <textarea
                 required
                 placeholder="Message"
@@ -42,10 +104,14 @@ const Form = () => {
                 rows={3}
                 className="input-field"
                 defaultValue={""}
+                name="message"
               />
             </div>
-            <button className="sendMessage-btn">Send Message</button>
+            <button className="sendMessage-btn" type="submit">
+              {loading ? "Sending..." : "Send Message"}
+            </button>
           </form>
+          <span>{result}</span>
         </div>
       </div>
     </StyledWrapper>
@@ -106,7 +172,7 @@ const StyledWrapper = styled.div`
     background-color: #00d1ff;
     color: #000;
     cursor: pointer;
-    margin-top:"10px";
+    margin-top: "10px";
   }
 
   .form-card1 {
